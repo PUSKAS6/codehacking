@@ -23,5 +23,12 @@ Route::get('/admin', function () {
     return view('admin.index');
 });
 
-//Route::resource('admin/users', 'AdminUsersController');
+Route::resource('admin/users', 'AdminUsersController',['names'=>[
+//'index'=>'admin.users.index',
+    'index'=>'admin.users.index',
+    'create'=>'admin.users.create',
+    'store'=>'admin.users.store',
+    'edit'=>'admin.users.edit',
+
+]]);
 
