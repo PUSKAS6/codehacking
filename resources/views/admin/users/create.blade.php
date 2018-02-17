@@ -5,11 +5,11 @@
     <h1>Create Users</h1>
 
 
-    <form action="{{ route('admin.users.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.users.store') }}", method ="post"  enctype ="multipart/form-data">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="name">Name:</label>
-            <input type="text" name="name" id="name" class="form-control">
+            <input type="text" name="name"  id="name" class="form-control">
         </div>
         <!-- ./.form-group -->
 
@@ -17,17 +17,21 @@
 
         <div class="form-group">
             <label for="email">E-mail:</label>
-            <input type="email" name="email" id="email"  class="form-control">
+            <input type="email" name="email"  id="email"  class="form-control">
         </div>
         <!-- ./.form-group -->
 
         <div class="form-group">
             <label for="role_id">Role:</label>
-            <input type="text" name="role_id"  class="form-control">
+            {{--<input type="text" name="role_id" id="role_id" class="form-control">--}}
+            <select name="role_id" id="role_id" class="form-control">
+                <option value="1">Administrator</option>
+                <option value="2">sUBSCRIBER</option>
+            </select>
 
-            {{--<select name="role_id" id="role_id">--}}
+            {{--<select name="role_id">--}}
         {{--@foreach($roles as $role)--}}
-        {{--<option value="{{ $role->id }}">{{ $role->name }}</option>--}}
+        {{--<option value="{{ $role['id'] }}">{{ $role['name'] }}</option>--}}
         {{--@endforeach--}}
         {{--</select>--}}
         </div>
@@ -36,7 +40,7 @@
 
         <div class="form-group">
             <label for="is_active">Is Active:</label>
-            <select name="is_active" id="is_active">
+            <select name="is_active" id="is_active" class="form-control" >
                 <option value="1">Active</option>
                 <option value="0">Not Active</option>
             </select>
@@ -45,13 +49,13 @@
 
         <div class="form-group">
             <label for="photo_id">Photo:</label>
-            <input type="file" name="photo_id" id="photo_id"  class="form-control">
+            <input type="file" name="photo_id"   id="photo_id"  >
         </div>
         <!-- ./.form-group -->
 
         <div class="form-group">
             <label for="password">Password:</label>
-            <input type="password" name="password" id="password"  class="form-control">
+            <input type="password" name="password"  id="password" class="form-control">
         </div>
         <!-- ./.form-group -->
 
