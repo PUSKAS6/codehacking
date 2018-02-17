@@ -20,7 +20,11 @@
 
             <select name="category_id" id="category_id" class="form-control">
                 <option value="1">PHP</option>
+                <option value="2">LARAVEL</option>
                 <option value="2">JAVASCRIPT</option>
+                <option value="2">BOOTSTRAP</option>
+
+
             </select>
 
 
