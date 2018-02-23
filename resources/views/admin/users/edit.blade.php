@@ -33,7 +33,7 @@
                     <label for="name">Name</label>
                     <input type="text" name="name" value="{{ $user->name }}" id="name" class="form-control">
                 </div>
-                <!-- ./.form-group -->
+                {{--<!-- ./.form-group -->--}}
 
                 <div class="form-group">
                     <label for="email">E-mail:</label>

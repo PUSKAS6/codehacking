@@ -11,7 +11,12 @@ class Post extends Model
         'category_id',
         'photo_id',
         'title',
-        'body'
+        'body',
+        'user_id',
+        'id',
+//
+
+
     ];
     public function user(){
 
@@ -27,5 +32,8 @@ class Post extends Model
 
         return $this->belongsTo('App\Category');
     }
+//    public function users(){
+//        return $this->hasMany('App\User');
+//    }
 
 }

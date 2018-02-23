@@ -43,7 +43,7 @@
 
         <div class="form-group">
             <label for="photo_id">Photo:</label>
-            <input type="file" name="photo_id"   id="photo_id"  >
+            <input type="file" name="photo_id"   id="photo_id"class="form-control" >
         </div>
         <!-- ./.form-group -->
 
