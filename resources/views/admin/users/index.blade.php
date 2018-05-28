@@ -22,8 +22,8 @@
             <th>Email</th>
             <th>Role</th>
             <th>Active</th>
-            <th>Created</th>
-            <th>Updated</th>
+            <th>Created at</th>
+            <th>Updated at</th>
         </tr>
         </thead>
         <tbody>
@@ -38,8 +38,8 @@
             <td>{{$user->email}}</td>
             <td>{{$user->role ? $user->role->name : 'User has no role'}}</td>
             <td>{{$user->is_active == 1 ? 'Active' : 'Not Active' }}</td>
-            <td>{{$user->created_at->diffForHumans()}}</td>
-            <td>{{$user->updated_at->diffForHumans()}}</td>
+            <td>{{$user->created_at}}</td>
+            <td>{{$user->updated_at}}</td>
         </tr>
 
         @endforeach

@@ -22,8 +22,15 @@
     </div>
 
     <div class="col-sm-6">
+        <form action="{{ route('categories.destroy', ['id' => $category->id]) }}" method="post" enctype="multipart/form-data">
+            {{ csrf_field() }}
+            {{ method_field('DELETE') }}
 
 
+            <div class="form-group">
+                <button type="submit" name="submit" class="btn btn-danger ">Delete Category</button>
+            </div>
+        </form>
 
     </div>
 @stop

@@ -11,9 +11,8 @@ class Post extends Model
         'category_id',
         'photo_id',
         'title',
-        'body',
-        'user_id',
-        'id',
+        'body'
+
 //
 
 
@@ -32,8 +31,13 @@ class Post extends Model
 
         return $this->belongsTo('App\Category');
     }
-//    public function users(){
-//        return $this->hasMany('App\User');
-//    }
+    public function comments(){
+
+        return $this->hasMany('App\Comment');
+    }
+    public function photoPlaceholder(){
+
+        return "http://placehold.it/500x200";
+    }
 
 }
